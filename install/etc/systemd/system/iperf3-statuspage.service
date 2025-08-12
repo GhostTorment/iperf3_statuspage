@@ -1,0 +1,15 @@
+[Unit]
+Description=Iperf3 Status Page API
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/iperf3-statuspage
+WorkingDirectory=/etc/iperf3-statuspage
+EnvironmentFile=/etc/iperf3-statuspage/.env
+Restart=on-failure
+RestartSec=5s
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
