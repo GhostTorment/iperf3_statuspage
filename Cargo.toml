@@ -1,6 +1,6 @@
 [package]
 name = "iperf3_statuspage"
-version = "0.1.7"
+version = "0.1.8"
 edition = "2024"
 authors = ["Jak Bracegirdle <jak@bracegirdle.io>"]
 description = "A utility application to serve iperf3 results over an HTTP endpoint."

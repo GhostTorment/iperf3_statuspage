@@ -89,7 +89,7 @@ pub struct Stream {
     pub bits_per_second: f64,
     pub retransmits: u32,
     pub snd_cwnd: u64,
-    pub snd_wnd: u64,
+    pub snd_wnd: i64,
     pub rtt: u32,
     pub rttvar: u32,
     pub pmtu: u32,
