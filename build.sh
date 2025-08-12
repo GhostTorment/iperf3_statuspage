@@ -103,7 +103,7 @@ case "$PROFILE" in
       local image="$1"
       echo "Testing image $image..."
 
-      CONTAINER_ID=$(docker run -d --rm "$image" || true)
+      CONTAINER_ID=$(docker run -d --rm -e BIND_ADDRESS=0.0.0.0 -e BIND_PORT=8080 -e INTERVAL_MINUTES=60 -e IPERF3_SERVER_IP=0.0.0.0 -e IPERF3_SERVER_PORT=5201"$image" || true)
 
       if [ -z "$CONTAINER_ID" ]; then
         echo "❌ Failed to start container for image: $image"
